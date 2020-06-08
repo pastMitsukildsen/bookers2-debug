@@ -30,6 +30,12 @@
 				</td>
 				<td><%= link_to book.title, book_path(book.id), class: "book_#{book.id}" %></td>
 				<td><%= book.body %></td>
+				<!-- コメント数 -->
+                <td>
+				<i class="fa fa-comment"></i>
+                    <%= link_to "#{book.book_comments.count} コメント", book_path(book.id) %>
+				</td>
+				<!-- ここまで -->
 			</tr>
 			<% end %>
 		</tbody>
